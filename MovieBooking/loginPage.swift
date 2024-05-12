@@ -8,8 +8,7 @@
 import SwiftUI
 
 struct loginPage: View {
-    @State private var username: String = ""
-    @State private var password: String = ""
+    @StateObject private var userDetailView = userDetail()
     @State private var isHovered: Bool = false
 
     var body: some View {
@@ -21,11 +20,11 @@ struct loginPage: View {
                     .font(.title)
                     .padding()
                 
-                TextField("Username", text: $username)
+                TextField("Username", text: $userDetailView.username)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .padding()
                 
-                SecureField("Password", text: $password)
+                SecureField("Password", text: $userDetailView.password)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .padding()
                 
