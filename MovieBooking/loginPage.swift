@@ -13,48 +13,46 @@ struct loginPage: View {
     @State private var isHovered: Bool = false
 
     var body: some View {
-        VStack {
-            Spacer()
-
-            Text("Login Form")
-                .font(.title)
+        NavigationView {
+            VStack {
+                Spacer()
+                
+                Text("Login Form")
+                    .font(.title)
+                    .padding()
+                
+                TextField("Username", text: $username)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .padding()
+                
+                SecureField("Password", text: $password)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .padding()
+                
+                NavigationLink(destination: homePage()) {
+                    Text("Login")
+                }
                 .padding()
-
-            TextField("Username", text: $username)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .scaleEffect(isHovered ? 1.2 : 1)
+                .onHover { hovering in
+                    withAnimation {
+                        isHovered = hovering
+                    }
+                }
+                
+                HStack {
+                    Text("Don't have an account? ")
+                    NavigationLink(destination: signUp()) {
+                        Text("Sign up")
+                            .foregroundColor(.blue)
+                    }
+                }
                 .padding()
-
-            SecureField("Password", text: $password)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
-                .padding()
-
-            Button(action: {
-                // Add login functionality here
-            }) {
-                Text("Login")
+                
+                Spacer()
             }
             .padding()
-            .scaleEffect(isHovered ? 1.2 : 1)
-            .onHover { hovering in
-                withAnimation {
-                    isHovered = hovering
-                }
-            }
-
-            HStack {
-                Text("Don't have an account? ")
-                Button(action: {
-                    // Add sign up functionality here
-                }) {
-                    Text("Sign up")
-                        .foregroundColor(.blue)
-                }
-            }
-            .padding()
-
-            Spacer()
         }
-        .padding()
     }
 }
 
