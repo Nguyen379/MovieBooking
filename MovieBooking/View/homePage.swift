@@ -7,11 +7,27 @@
 
 import SwiftUI
 
+
 struct homePage: View {
+
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            ZStack {                
+                NavigationLink(
+                    destination: userProfile()
+                ) {
+                    Circle()
+                        .fill(Color.blue)
+                        .frame(width: 100, height: 100)
+                        .offset(y: 50)               
+                }
+            }
+        }
     }
 }
+
+
 
 #Preview {
     homePage()

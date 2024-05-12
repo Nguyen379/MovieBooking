@@ -13,6 +13,9 @@
 		CBAE92672BEFE3F400F9852E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBAE92662BEFE3F400F9852E /* Preview Assets.xcassets */; };
 		DAAAFC1A2BF09E85004D52CD /* loginPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAAFC192BF09E84004D52CD /* loginPage.swift */; };
 		DAC89B872BF123BB00FB56AA /* userDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC89B862BF123BB00FB56AA /* userDetails.swift */; };
+		DAC89BC52BF1459E00FB56AA /* userProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC89BC42BF1459E00FB56AA /* userProfile.swift */; };
+		DAC89BC72BF1480E00FB56AA /* editDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC89BC62BF1480E00FB56AA /* editDetails.swift */; };
+		DAC89BC92BF1482400FB56AA /* myBookings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC89BC82BF1482400FB56AA /* myBookings.swift */; };
 		DACC746E2BF0C58300A96294 /* signUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACC746D2BF0C58300A96294 /* signUp.swift */; };
 		DACC74702BF0CAAE00A96294 /* homePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACC746F2BF0CAAE00A96294 /* homePage.swift */; };
 /* End PBXBuildFile section */
@@ -25,6 +28,9 @@
 		CBAE92662BEFE3F400F9852E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DAAAFC192BF09E84004D52CD /* loginPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginPage.swift; sourceTree = "<group>"; };
 		DAC89B862BF123BB00FB56AA /* userDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userDetails.swift; sourceTree = "<group>"; };
+		DAC89BC42BF1459E00FB56AA /* userProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userProfile.swift; sourceTree = "<group>"; };
+		DAC89BC62BF1480E00FB56AA /* editDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = editDetails.swift; sourceTree = "<group>"; };
+		DAC89BC82BF1482400FB56AA /* myBookings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myBookings.swift; sourceTree = "<group>"; };
 		DACC746D2BF0C58300A96294 /* signUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signUp.swift; sourceTree = "<group>"; };
 		DACC746F2BF0CAAE00A96294 /* homePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homePage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -92,6 +98,9 @@
 				DACC746F2BF0CAAE00A96294 /* homePage.swift */,
 				DACC746D2BF0C58300A96294 /* signUp.swift */,
 				CBAE92612BEFE3F200F9852E /* ContentView.swift */,
+				DAC89BC42BF1459E00FB56AA /* userProfile.swift */,
+				DAC89BC82BF1482400FB56AA /* myBookings.swift */,
+				DAC89BC62BF1480E00FB56AA /* editDetails.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -173,11 +182,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAC89BC72BF1480E00FB56AA /* editDetails.swift in Sources */,
 				DACC74702BF0CAAE00A96294 /* homePage.swift in Sources */,
 				CBAE92622BEFE3F200F9852E /* ContentView.swift in Sources */,
 				DACC746E2BF0C58300A96294 /* signUp.swift in Sources */,
 				CBAE92602BEFE3F200F9852E /* MovieBookingApp.swift in Sources */,
+				DAC89BC52BF1459E00FB56AA /* userProfile.swift in Sources */,
 				DAAAFC1A2BF09E85004D52CD /* loginPage.swift in Sources */,
+				DAC89BC92BF1482400FB56AA /* myBookings.swift in Sources */,
 				DAC89B872BF123BB00FB56AA /* userDetails.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
