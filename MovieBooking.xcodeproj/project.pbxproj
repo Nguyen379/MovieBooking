@@ -43,8 +43,7 @@
 		CBAE92532BEFE3F200F9852E = {
 			isa = PBXGroup;
 			children = (
-				DAC89B852BF1231300FB56AA /* Data */,
-				CBAE925E2BEFE3F200F9852E /* PageView */,
+				CBAE925E2BEFE3F200F9852E /* MovieBooking */,
 				CBAE925D2BEFE3F200F9852E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -57,18 +56,17 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		CBAE925E2BEFE3F200F9852E /* PageView */ = {
+		CBAE925E2BEFE3F200F9852E /* MovieBooking */ = {
 			isa = PBXGroup;
 			children = (
+				DAC89BC32BF1346300FB56AA /* InterfaceUI */,
+				DAC89B852BF1231300FB56AA /* Data */,
+				DAC89BC22BF1340B00FB56AA /* View */,
 				CBAE925F2BEFE3F200F9852E /* MovieBookingApp.swift */,
-				CBAE92612BEFE3F200F9852E /* ContentView.swift */,
-				DAAAFC192BF09E84004D52CD /* loginPage.swift */,
-				DACC746D2BF0C58300A96294 /* signUp.swift */,
-				DACC746F2BF0CAAE00A96294 /* homePage.swift */,
 				CBAE92632BEFE3F400F9852E /* Assets.xcassets */,
 				CBAE92652BEFE3F400F9852E /* Preview Content */,
 			);
-			path = PageView;
+			path = MovieBooking;
 			sourceTree = "<group>";
 		};
 		CBAE92652BEFE3F400F9852E /* Preview Content */ = {
@@ -85,6 +83,24 @@
 				DAC89B862BF123BB00FB56AA /* userDetails.swift */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		DAC89BC22BF1340B00FB56AA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DACC746F2BF0CAAE00A96294 /* homePage.swift */,
+				DACC746D2BF0C58300A96294 /* signUp.swift */,
+				DAAAFC192BF09E84004D52CD /* loginPage.swift */,
+				CBAE92612BEFE3F200F9852E /* ContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DAC89BC32BF1346300FB56AA /* InterfaceUI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = InterfaceUI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
