@@ -20,7 +20,7 @@ struct loginPage: View {
                     .font(.title)
                     .padding()
                 
-                TextField("Username", text: $userDetailView.username)
+                TextField("Email", text: $userDetailView.email)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .padding()
                 
@@ -30,7 +30,7 @@ struct loginPage: View {
                 
                 NavigationLink(destination: homePage()) {
                     Text("Login")
-                }
+                    .foregroundColor(.blue)                }
                 .padding()
                 .scaleEffect(isHovered ? 1.2 : 1)
                 .onHover { hovering in
@@ -43,7 +43,7 @@ struct loginPage: View {
                     Text("Don't have an account? ")
                     NavigationLink(destination: signUp()) {
                         Text("Sign up")
-                            .foregroundColor(.blue)
+                        .foregroundColor(.blue)
                     }
                 }
                 .padding()

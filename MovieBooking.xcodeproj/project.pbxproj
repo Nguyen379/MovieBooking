@@ -88,9 +88,9 @@
 		DAC89BC22BF1340B00FB56AA /* View */ = {
 			isa = PBXGroup;
 			children = (
+				DAAAFC192BF09E84004D52CD /* loginPage.swift */,
 				DACC746F2BF0CAAE00A96294 /* homePage.swift */,
 				DACC746D2BF0C58300A96294 /* signUp.swift */,
-				DAAAFC192BF09E84004D52CD /* loginPage.swift */,
 				CBAE92612BEFE3F200F9852E /* ContentView.swift */,
 			);
 			path = View;

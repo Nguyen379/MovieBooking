@@ -7,11 +7,52 @@
 
 import SwiftUI
 
+
 struct signUp: View {
+    @StateObject private var newUserDetail = userDetail()
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            VStack {
+                Spacer()
+                
+                Text("Sign Up Form")
+                    .font(.title)
+                    .padding()
+                
+                TextField("Email", text: $newUserDetail.email)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .padding()
+
+                TextField("Full Name", text: $newUserDetail.username)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .padding()
+            
+                SecureField("Password", text: $newUserDetail.password)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .padding()
+                
+                NavigationLink(destination: homePage()) {
+                    Text("Sign Up")
+                    .foregroundColor(.blue)                }
+                .padding()
+                
+                HStack{
+                    Text("Already have an account?")
+                    NavigationLink(destination: loginPage()){
+                        Text("Login")
+                        .foregroundColor(.blue)
+                    }
+                }
+                .padding()
+                
+                Spacer()
+            }
+            .padding()
+        }
     }
 }
+
 
 #Preview {
     signUp()
