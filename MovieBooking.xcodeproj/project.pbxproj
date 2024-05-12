@@ -44,7 +44,7 @@
 			isa = PBXGroup;
 			children = (
 				DAC89B852BF1231300FB56AA /* Data */,
-				CBAE925E2BEFE3F200F9852E /* MovieBooking */,
+				CBAE925E2BEFE3F200F9852E /* PageView */,
 				CBAE925D2BEFE3F200F9852E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -57,7 +57,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		CBAE925E2BEFE3F200F9852E /* MovieBooking */ = {
+		CBAE925E2BEFE3F200F9852E /* PageView */ = {
 			isa = PBXGroup;
 			children = (
 				CBAE925F2BEFE3F200F9852E /* MovieBookingApp.swift */,
@@ -68,7 +68,7 @@
 				CBAE92632BEFE3F400F9852E /* Assets.xcassets */,
 				CBAE92652BEFE3F400F9852E /* Preview Content */,
 			);
-			path = MovieBooking;
+			path = PageView;
 			sourceTree = "<group>";
 		};
 		CBAE92652BEFE3F400F9852E /* Preview Content */ = {
