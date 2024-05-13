@@ -9,8 +9,8 @@ import SwiftUI
 
 
 struct homePage: View {
-
-
+    
+    
     var body: some View {
         NavigationView {
             VStack {
@@ -23,11 +23,11 @@ struct homePage: View {
                         destination: userProfile().navigationBarBackButtonHidden(true)) {
                             Text("User Profile")
                                 .foregroundColor(.white)
-                                              
+                            
                         }
                 }
                 .offset(y: 50)
-
+                
                 HStack{
                     ZStack{
                         Rectangle()
@@ -35,12 +35,12 @@ struct homePage: View {
                             .frame(width: 100, height: 100)
                         
                         NavigationLink(
-                            destination: bookingPage().navigationBarBackButtonHidden(true)) {
+                            destination: movieDescription()) {
                                 Text("Movie 1")
                                     .foregroundColor(.white)
                             }
                         
-                            
+                        
                     }
                     .offset(y: 200)
                     ZStack{
@@ -48,18 +48,21 @@ struct homePage: View {
                             .fill(Color.red)
                             .frame(width: 100, height: 100)
                         NavigationLink(
-                            destination: bookingPage().navigationBarBackButtonHidden(true)) {
-                                Text("Movie 2")
-                                    .foregroundColor(.white)
-                                    
+                            destination: homePage()) {
+                                VStack{
+                                    Text("Movie 2")
+                                        .foregroundColor(.white)
+                                    Text("(Unavailabe)")
+                                        .foregroundColor(.white)
+                                }
                             }
+                            }
+                            .offset(y: 200)
                     }
-                    .offset(y: 200)
                 }
             }
         }
     }
-}
 
 
 

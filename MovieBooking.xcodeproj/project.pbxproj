@@ -13,7 +13,8 @@
 		CBAE92672BEFE3F400F9852E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBAE92662BEFE3F400F9852E /* Preview Assets.xcassets */; };
 		DA7E13432BF29341003E924E /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7E13422BF29341003E924E /* Font.swift */; };
 		DA7E13452BF29A7E003E924E /* editDetails2.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7E13442BF29A7E003E924E /* editDetails2.swift */; };
-		DA7E13472BF2A0D2003E924E /* bookingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7E13462BF2A0D2003E924E /* bookingPage.swift */; };
+		DA7E13492BF2A989003E924E /* bookingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7E13482BF2A989003E924E /* bookingPage.swift */; };
+		DA7E134B2BF2A9A4003E924E /* movieDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7E134A2BF2A9A4003E924E /* movieDescription.swift */; };
 		DAAAFC1A2BF09E85004D52CD /* loginPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAAFC192BF09E84004D52CD /* loginPage.swift */; };
 		DAC89B872BF123BB00FB56AA /* userDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC89B862BF123BB00FB56AA /* userDetails.swift */; };
 		DAC89BC52BF1459E00FB56AA /* userProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC89BC42BF1459E00FB56AA /* userProfile.swift */; };
@@ -31,7 +32,8 @@
 		CBAE92662BEFE3F400F9852E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DA7E13422BF29341003E924E /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Font.swift; path = MovieBooking/View/Font.swift; sourceTree = SOURCE_ROOT; };
 		DA7E13442BF29A7E003E924E /* editDetails2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = editDetails2.swift; sourceTree = "<group>"; };
-		DA7E13462BF2A0D2003E924E /* bookingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bookingPage.swift; sourceTree = "<group>"; };
+		DA7E13482BF2A989003E924E /* bookingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bookingPage.swift; sourceTree = "<group>"; };
+		DA7E134A2BF2A9A4003E924E /* movieDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = movieDescription.swift; sourceTree = "<group>"; };
 		DAAAFC192BF09E84004D52CD /* loginPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginPage.swift; sourceTree = "<group>"; };
 		DAC89B862BF123BB00FB56AA /* userDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userDetails.swift; sourceTree = "<group>"; };
 		DAC89BC42BF1459E00FB56AA /* userProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userProfile.swift; sourceTree = "<group>"; };
@@ -114,8 +116,9 @@
 				CBAE92612BEFE3F200F9852E /* ContentView.swift */,
 				DAC89BC42BF1459E00FB56AA /* userProfile.swift */,
 				DAC89BC82BF1482400FB56AA /* myBookings.swift */,
-				DA7E13462BF2A0D2003E924E /* bookingPage.swift */,
 				DAC89BC62BF1480E00FB56AA /* editDetails.swift */,
+				DA7E13482BF2A989003E924E /* bookingPage.swift */,
+				DA7E134A2BF2A9A4003E924E /* movieDescription.swift */,
 				DA7E13442BF29A7E003E924E /* editDetails2.swift */,
 			);
 			path = View;
@@ -194,10 +197,11 @@
 				DAC89BC72BF1480E00FB56AA /* editDetails.swift in Sources */,
 				DACC74702BF0CAAE00A96294 /* homePage.swift in Sources */,
 				DA7E13432BF29341003E924E /* Font.swift in Sources */,
+				DA7E134B2BF2A9A4003E924E /* movieDescription.swift in Sources */,
 				CBAE92622BEFE3F200F9852E /* ContentView.swift in Sources */,
 				DACC746E2BF0C58300A96294 /* signUp.swift in Sources */,
 				CBAE92602BEFE3F200F9852E /* MovieBookingApp.swift in Sources */,
-				DA7E13472BF2A0D2003E924E /* bookingPage.swift in Sources */,
+				DA7E13492BF2A989003E924E /* bookingPage.swift in Sources */,
 				DAC89BC52BF1459E00FB56AA /* userProfile.swift in Sources */,
 				DA7E13452BF29A7E003E924E /* editDetails2.swift in Sources */,
 				DAAAFC1A2BF09E85004D52CD /* loginPage.swift in Sources */,
