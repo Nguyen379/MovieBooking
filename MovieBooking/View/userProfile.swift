@@ -10,23 +10,32 @@ import SwiftUI
 struct userProfile: View {
     var body: some View {
         NavigationView {
-            List {
-                NavigationLink(destination: loginPage().navigationBarBackButtonHidden(true)) {
-                    Text("Sign Out")
+            VStack{
+                List {
+                    NavigationLink(destination: loginPage().navigationBarBackButtonHidden(true)) {
+                        Text("Sign Out")
+                    }
+                    
+                    NavigationLink(destination: editDetails()) {
+                        Text("Edit User Details")
+                    }
+                    
+                    NavigationLink(destination: myBookings()) {
+                        Text("My Bookings")
+                    }
+                    NavigationLink(destination:homePage().navigationBarBackButtonHidden(true)) {
+                        Text("Return to home page")
+                    }
                 }
+                .navigationTitle("User Profile")
                 
-                NavigationLink(destination: editDetails()) {
-                    Text("Edit User Details")
-                }
-                
-                NavigationLink(destination: myBookings()) {
-                    Text("My Bookings")
+
                 }
             }
-            .navigationTitle("User Profile")
+            
         }
     }
-}
+
 
 
 #Preview {

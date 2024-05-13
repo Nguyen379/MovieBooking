@@ -15,8 +15,7 @@ struct homePage: View {
         NavigationView {
             ZStack {                
                 NavigationLink(
-                    destination: userProfile()
-                ) {
+                    destination: userProfile().navigationBarBackButtonHidden(true)) {
                     Circle()
                         .fill(Color.blue)
                         .frame(width: 100, height: 100)

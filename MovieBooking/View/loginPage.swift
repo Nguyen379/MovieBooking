@@ -28,7 +28,7 @@ struct loginPage: View {
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .padding()
                 
-                NavigationLink(destination: homePage()) {
+                NavigationLink(destination: homePage().navigationBarBackButtonHidden(true)) {
                     Text("Login")
                     .foregroundColor(.blue)                }
                 .padding()
@@ -41,7 +41,7 @@ struct loginPage: View {
                 
                 HStack {
                     Text("Don't have an account? ")
-                    NavigationLink(destination: signUp()) {
+                    NavigationLink(destination: signUp().navigationBarBackButtonHidden(true)) {
                         Text("Sign up")
                         .foregroundColor(.blue)
                     }
