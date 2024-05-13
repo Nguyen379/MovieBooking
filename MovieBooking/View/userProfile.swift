@@ -16,7 +16,7 @@ struct userProfile: View {
                         Text("Sign Out")
                     }
                     
-                    NavigationLink(destination: editDetails()) {
+                    NavigationLink(destination: editDetails1()) {
                         Text("Edit User Details")
                     }
                     
@@ -28,6 +28,7 @@ struct userProfile: View {
                     }
                 }
                 .navigationTitle("User Profile")
+                
                 
 
                 }
