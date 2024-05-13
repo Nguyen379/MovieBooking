@@ -17,9 +17,9 @@ import SwiftUI
 //}
 
 class userDetail: ObservableObject {
-    @Published var username: String = "ABS"
-    @Published var password: String = "abs"
-    @Published var email: String = "ABS@com"
+    @Published var username: String = "ABC"
+    @Published var password: String = "abc"
+    @Published var email: String = "ABC@com"
 }
 
 
