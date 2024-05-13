@@ -9,9 +9,23 @@ import SwiftUI
 
 struct myBookings: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            List {
+                ForEach(0..<3, id: \.self) { _ in
+                    VStack(alignment: .leading, spacing: 5) {
+                        Text("Movie: ____________")
+                        Text("Date: ____________")
+                        Text("Time: ____________")
+                        Text("Seat: ____________")
+                    }
+                    .padding()
+                }
+            }
+            .navigationBarTitle("My Bookings")
+        }
     }
 }
+
 
 #Preview {
     myBookings()
