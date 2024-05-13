@@ -7,14 +7,16 @@
 
 import SwiftUI
 
-
 struct bookingPage: View {
     @State var seatStates: [[Bool]] = Array(repeating: Array(repeating: false, count: 6), count: 5)
-    @State var isButtonEnabled = false
+    @State var selectedSeat: (row: Int, column: Int)? = nil
+    @State var Button = false
     
     var body: some View {
         NavigationView{
             VStack {
+                Text("Select one seat to process")
+                    .font(.titleFont)
                 // Center top rectangle with text "Screen"
                 ZStack {
                     Rectangle()
@@ -23,6 +25,7 @@ struct bookingPage: View {
                         .overlay(Text("Screen").foregroundColor(.white))
                 }
                 .padding()
+                
                 // Grid of clickable rectangles for cinema seats
                 VStack(spacing: 5) {
                     ForEach(0..<5, id: \.self) { row in
@@ -32,25 +35,28 @@ struct bookingPage: View {
                                     .fill(seatStates[row][column] ? Color.red : Color.blue)
                                     .frame(width: 40, height: 50)
                                     .onTapGesture {
+                                        if let seat = selectedSeat {
+                                            seatStates[seat.row][seat.column] = false
+                                        }
+                                        selectedSeat = (row, column)
                                         seatStates[row][column].toggle()
-                                        isButtonEnabled = seatStates.flatMap { $0 }.contains(true)
+                                        Button = seatStates.flatMap { $0 }.contains(true)
                                     }
                             }
                         }
                     }
                 }
                 
-                // Button only clickable when at least one seat is selected
-                
-                NavigationLink(destination: myBookings()){
-                    Text("Confirm seat")
-                        .foregroundColor(isButtonEnabled ? Color.blue : Color.gray)
-                        
-                        .padding()
-                }
-                .disabled(!isButtonEnabled)
-                .padding()
+                // Text only clickable when at least one seat is selected
+                NavigationLink(
+                    destination: myBookings()){
+                        Text("Book Tickets")
+                            .foregroundColor((selectedSeat != nil) ? Color.blue : Color.gray)
+                    }
+                    .disabled(!Button)
+                    .padding()
             }
+            .padding()
         }
     }
 }
