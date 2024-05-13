@@ -13,13 +13,48 @@ struct homePage: View {
 
     var body: some View {
         NavigationView {
-            ZStack {                
-                NavigationLink(
-                    destination: userProfile().navigationBarBackButtonHidden(true)) {
+            VStack {
+                ZStack{
                     Circle()
                         .fill(Color.blue)
                         .frame(width: 100, height: 100)
-                        .offset(y: 50)               
+                    
+                    NavigationLink(
+                        destination: userProfile().navigationBarBackButtonHidden(true)) {
+                            Text("User Profile")
+                                .foregroundColor(.white)
+                                              
+                        }
+                }
+                .offset(y: 50)
+
+                HStack{
+                    ZStack{
+                        Rectangle()
+                            .fill(Color.red)
+                            .frame(width: 100, height: 100)
+                        
+                        NavigationLink(
+                            destination: bookingPage().navigationBarBackButtonHidden(true)) {
+                                Text("Movie 1")
+                                    .foregroundColor(.white)
+                            }
+                        
+                            
+                    }
+                    .offset(y: 200)
+                    ZStack{
+                        Rectangle()
+                            .fill(Color.red)
+                            .frame(width: 100, height: 100)
+                        NavigationLink(
+                            destination: bookingPage().navigationBarBackButtonHidden(true)) {
+                                Text("Movie 2")
+                                    .foregroundColor(.white)
+                                    
+                            }
+                    }
+                    .offset(y: 200)
                 }
             }
         }

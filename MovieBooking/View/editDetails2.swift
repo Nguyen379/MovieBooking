@@ -26,12 +26,12 @@ struct editDetails2: View {
                         .overlay(RoundedRectangle(cornerRadius: 5).stroke(Color.gray, lineWidth: 1))
                     
                     Text("Email:")
-                    Text(UserDetail.email)
+                    TextField("Enter your new email", text: $UserDetail.email)
                         .frame(maxWidth: 300, alignment: .leading)                       .padding()
                         .overlay(RoundedRectangle(cornerRadius: 5).stroke(Color.gray, lineWidth: 1))
                     
                     Text("Password:")
-                    Text(UserDetail.password)
+                    TextField("Enter your new password",text: $UserDetail.password)
                         .frame(maxWidth: 300, alignment: .leading)                       .padding()
                         .overlay(RoundedRectangle(cornerRadius: 5).stroke(Color.gray, lineWidth: 1))
                         .padding()
@@ -44,7 +44,7 @@ struct editDetails2: View {
                 // Buttons for Edit and Delete
 
                     NavigationLink(destination: editDetails1().navigationBarBackButtonHidden(true)) {
-                        Text("Edit")
+                        Text("Confirm")
                             .padding()
                             .buttonStyle(.bordered)
                     }

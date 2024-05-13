@@ -41,7 +41,7 @@ struct editDetails1: View {
                 
                 // Buttons for Edit and Delete
                 HStack {
-                    NavigationLink(destination: homePage().navigationBarBackButtonHidden(true)) {
+                    NavigationLink(destination: editDetails2().navigationBarBackButtonHidden(true)) {
                         Text("Edit")
                             .padding()
                             .buttonStyle(.bordered)
@@ -54,6 +54,12 @@ struct editDetails1: View {
                             .foregroundColor(.red)
                     }
                 }
+                    NavigationLink(destination: userProfile().navigationBarBackButtonHidden(true)) {
+                        Text("Go back")
+                            .padding()
+                            .buttonStyle(.bordered)
+                            .foregroundColor(.blue)
+                    }
             }
             .navigationBarTitle("Edit User Details", displayMode: .inline)
         }
