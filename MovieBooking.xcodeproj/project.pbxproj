@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A7782CC2BF0F03B00BE9902 /* Cinema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7782CB2BF0F03B00BE9902 /* Cinema.swift */; };
+		9A7782CE2BF0F05900BE9902 /* CinemaMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7782CD2BF0F05900BE9902 /* CinemaMapView.swift */; };
+		9A7782D02BF0F07700BE9902 /* CinemaListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7782CF2BF0F07700BE9902 /* CinemaListView.swift */; };
+		9A7782D22BF0F09300BE9902 /* CinemaBookingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7782D12BF0F09300BE9902 /* CinemaBookingView.swift */; };
 		CBAE92602BEFE3F200F9852E /* MovieBookingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAE925F2BEFE3F200F9852E /* MovieBookingApp.swift */; };
 		CBAE92622BEFE3F200F9852E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAE92612BEFE3F200F9852E /* ContentView.swift */; };
 		CBAE92642BEFE3F400F9852E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBAE92632BEFE3F400F9852E /* Assets.xcassets */; };
@@ -14,6 +18,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9A7782CB2BF0F03B00BE9902 /* Cinema.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cinema.swift; sourceTree = "<group>"; };
+		9A7782CD2BF0F05900BE9902 /* CinemaMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CinemaMapView.swift; sourceTree = "<group>"; };
+		9A7782CF2BF0F07700BE9902 /* CinemaListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CinemaListView.swift; sourceTree = "<group>"; };
+		9A7782D12BF0F09300BE9902 /* CinemaBookingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CinemaBookingView.swift; sourceTree = "<group>"; };
 		CBAE925C2BEFE3F200F9852E /* MovieBooking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieBooking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBAE925F2BEFE3F200F9852E /* MovieBookingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieBookingApp.swift; sourceTree = "<group>"; };
 		CBAE92612BEFE3F200F9852E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -53,6 +61,10 @@
 			children = (
 				CBAE925F2BEFE3F200F9852E /* MovieBookingApp.swift */,
 				CBAE92612BEFE3F200F9852E /* ContentView.swift */,
+				9A7782CB2BF0F03B00BE9902 /* Cinema.swift */,
+				9A7782CD2BF0F05900BE9902 /* CinemaMapView.swift */,
+				9A7782CF2BF0F07700BE9902 /* CinemaListView.swift */,
+				9A7782D12BF0F09300BE9902 /* CinemaBookingView.swift */,
 				CBAE92632BEFE3F400F9852E /* Assets.xcassets */,
 				CBAE92652BEFE3F400F9852E /* Preview Content */,
 			);
@@ -137,8 +149,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A7782CE2BF0F05900BE9902 /* CinemaMapView.swift in Sources */,
+				9A7782CC2BF0F03B00BE9902 /* Cinema.swift in Sources */,
 				CBAE92622BEFE3F200F9852E /* ContentView.swift in Sources */,
+				9A7782D02BF0F07700BE9902 /* CinemaListView.swift in Sources */,
 				CBAE92602BEFE3F200F9852E /* MovieBookingApp.swift in Sources */,
+				9A7782D22BF0F09300BE9902 /* CinemaBookingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
