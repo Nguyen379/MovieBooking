@@ -14,11 +14,6 @@ struct homePage: View {
     var body: some View {
         NavigationView {
             VStack {
-                
-                Text("Home Page")
-                    .font(.title)
-                    .padding()
-
                 ZStack{
                     Circle()
                         .fill(Color.blue)

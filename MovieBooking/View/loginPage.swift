@@ -9,12 +9,7 @@ import SwiftUI
 
 struct loginPage: View {
     @StateObject private var userDetailView = userDetail()
-    @State private var email: String = ""
-    @State private var password: String = ""
-    @State private var match: Bool = false
-    @State private var check: Bool = false
-
-    let userInput = userDetail()
+    @State private var isHovered: Bool = false
 
     var body: some View {
         NavigationView {
@@ -25,34 +20,24 @@ struct loginPage: View {
                     .font(.title)
                     .padding()
                 
-                TextField("Email", text: $email)
+                TextField("Email", text: $userDetailView.email)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .padding()
                 
-                SecureField("Password", text: $password)
+                SecureField("Password", text: $userDetailView.password)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .padding()
                 
-                HStack{
-                    Button(action: {
-                        if email == userInput.email && password == userInput.password{
-                            match = true
-                        } else {
-                            match = false
-                        }}){
-                            Text("Validate")
-                        }
-                    
-                    NavigationLink(destination: homePage().navigationBarBackButtonHidden(true)) {
-                        Text("Login")
-                            .foregroundColor(match ? .blue : .gray)
+                NavigationLink(destination: homePage().navigationBarBackButtonHidden(true)) {
+                    Text("Login")
+                    .foregroundColor(.blue)                }
+                .padding()
+                .scaleEffect(isHovered ? 1.2 : 1)
+                .onHover { hovering in
+                    withAnimation {
+                        isHovered = hovering
                     }
-                    .disabled(!match)
-                    .padding()
-                    
                 }
-                
-                
                 
                 HStack {
                     Text("Don't have an account? ")
