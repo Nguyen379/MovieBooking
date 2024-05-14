@@ -49,7 +49,7 @@ struct bookingPage: View {
                 
                 // Text only clickable when at least one seat is selected
                 NavigationLink(
-                    destination: myBookings()){
+                    destination: myBookings().navigationBarBackButtonHidden(true)){
                         Text("Book Tickets")
                             .foregroundColor((selectedSeat != nil) ? Color.blue : Color.gray)
                     }
