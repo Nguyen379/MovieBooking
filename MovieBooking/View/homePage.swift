@@ -35,7 +35,7 @@ struct homePage: View {
                             .frame(width: 100, height: 100)
                         
                         NavigationLink(
-                            destination: movieDescription()) {
+                            destination: movieDescription().navigationBarBackButtonHidden(true)) {
                                 Text("Movie 1")
                                     .foregroundColor(.white)
                             }
