@@ -13,7 +13,7 @@ struct movieDescription: View {
             VStack{
                 Text("Movie length, image, rating, ...")
                     .padding()
-                NavigationLink(destination: bookingPage()){
+                NavigationLink(destination: bookingPage().navigationBarBackButtonHidden(true)){
                     Text("Book now")
                 }
             }

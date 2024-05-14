@@ -20,7 +20,7 @@ struct userProfile: View {
                         Text("Edit User Details")
                     }
                     
-                    NavigationLink(destination: myBookings()) {
+                    NavigationLink(destination: myBookings().navigationBarBackButtonHidden(true)) {
                         Text("My Bookings")
                     }
                     NavigationLink(destination:homePage().navigationBarBackButtonHidden(true)) {

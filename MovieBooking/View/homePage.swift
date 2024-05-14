@@ -48,7 +48,7 @@ struct homePage: View {
                             .fill(Color.red)
                             .frame(width: 100, height: 100)
                         NavigationLink(
-                            destination: homePage()) {
+                            destination: homePage().navigationBarBackButtonHidden(true)) {
                                 VStack{
                                     Text("Movie 2")
                                         .foregroundColor(.white)
