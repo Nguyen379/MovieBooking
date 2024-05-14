@@ -8,7 +8,7 @@
 import SwiftUI
 import MapKit
 
-struct ContentView: View {
+struct MapContentView: View {
     //Static list of cinemas
     let cinemas = [
         Cinema(name: "Burwood Cinema", coordinate: CLLocationCoordinate2D(latitude: -33.8708, longitude: 151.1043)),
@@ -66,5 +66,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    MapContentView()
 }
