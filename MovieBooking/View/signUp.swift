@@ -20,15 +20,15 @@ struct signUp: View {
                     .font(.title)
                     .padding()
                 
-                TextField("Email", text: $newUserDetail.email)
+                TextField("Email", text: $email)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .padding()
 
-                TextField("Full Name", text: $newUserDetail.username)
+                TextField("Full Name", text: $username)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .padding()
             
-                SecureField("Password", text: $newUserDetail.password)
+                SecureField("Password", text: $password)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .padding()
                 
