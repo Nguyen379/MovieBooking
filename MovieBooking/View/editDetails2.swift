@@ -6,10 +6,11 @@
 //
 
 import SwiftUI
-
 struct editDetails2: View {
     @StateObject private var UserDetail = userDetail()
-    
+    @State private var email: String = ""
+    @State private var password: String = ""
+    @State private var username: String = ""
     var body: some View {
         NavigationView {
             VStack {
@@ -20,19 +21,21 @@ struct editDetails2: View {
                         .foregroundColor(.blue)
                         .padding()
                     Text("Username:")
-                    TextField("Enter username", text: $UserDetail.username)
+                    TextField("Enter username", text: $username)
                         .frame(maxWidth: 300, alignment: .leading)
                         .padding()
                         .overlay(RoundedRectangle(cornerRadius: 5).stroke(Color.gray, lineWidth: 1))
                     
                     Text("Email:")
-                    TextField("Enter your new email", text: $UserDetail.email)
-                        .frame(maxWidth: 300, alignment: .leading)                       .padding()
+                    TextField("Enter your new email", text: $email)
+                        .frame(maxWidth: 300, alignment: .leading)                       
+                        .padding()
                         .overlay(RoundedRectangle(cornerRadius: 5).stroke(Color.gray, lineWidth: 1))
                     
                     Text("Password:")
-                    TextField("Enter your new password",text: $UserDetail.password)
-                        .frame(maxWidth: 300, alignment: .leading)                       .padding()
+                    TextField("Enter your new password",text: $password)
+                        .frame(maxWidth: 300, alignment: .leading)                       
+                        .padding()
                         .overlay(RoundedRectangle(cornerRadius: 5).stroke(Color.gray, lineWidth: 1))
                         .padding()
                     
@@ -42,7 +45,6 @@ struct editDetails2: View {
                 .padding()
                 
                 // Buttons for Edit and Delete
-
                     NavigationLink(destination: editDetails1().navigationBarBackButtonHidden(true)) {
                         Text("Confirm")
                             .padding()
@@ -62,7 +64,9 @@ struct editDetails2: View {
     }
     
 }
-
 #Preview {
     editDetails2()
 }
+
+
+
