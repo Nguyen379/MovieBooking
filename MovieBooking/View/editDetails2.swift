@@ -28,13 +28,13 @@ struct editDetails2: View {
                     
                     Text("Email:")
                     TextField("Enter your new email", text: $email)
-                        .frame(maxWidth: 300, alignment: .leading)                       
+                        .frame(maxWidth: 300, alignment: .leading)
                         .padding()
                         .overlay(RoundedRectangle(cornerRadius: 5).stroke(Color.gray, lineWidth: 1))
                     
                     Text("Password:")
                     TextField("Enter your new password",text: $password)
-                        .frame(maxWidth: 300, alignment: .leading)                       
+                        .frame(maxWidth: 300, alignment: .leading)
                         .padding()
                         .overlay(RoundedRectangle(cornerRadius: 5).stroke(Color.gray, lineWidth: 1))
                         .padding()
@@ -67,6 +67,4 @@ struct editDetails2: View {
 #Preview {
     editDetails2()
 }
-
-
 

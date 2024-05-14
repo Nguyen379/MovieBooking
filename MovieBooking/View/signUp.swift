@@ -10,6 +10,9 @@ import SwiftUI
 
 struct signUp: View {
     @StateObject private var newUserDetail = userDetail()
+    @State private var email: String = ""
+    @State private var password: String = ""
+    @State private var username: String = ""
     
     var body: some View {
         NavigationView {
