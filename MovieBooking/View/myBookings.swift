@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-
 struct myBookings: View {
     var body: some View {
         NavigationView {
@@ -15,16 +14,24 @@ struct myBookings: View {
                     VStack(alignment: .leading, spacing: 5) {
                         Text("Movie: ____________")
                         Text("Date: ____________")
+
                         Text("Time: ____________")
                         Text("Seat: ____________")
                     }
                     .padding()
                 }
+                
+                NavigationLink(destination: homePage().navigationBarBackButtonHidden(true)) {
+                    Text("Go to Homepage")
+                    
+                }
             }
+            
             .navigationBarTitle("My Bookings")
         }
     }
 }
+
 
 
 #Preview {
