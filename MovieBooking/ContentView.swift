@@ -21,7 +21,7 @@ struct ContentView: View {
                     HomeView()	
                         .tag(Tab.home)	
 
-                    Text("Location")	
+                    MapContentView()	
                         .tag(Tab.location)	
 
                     TicketView()	

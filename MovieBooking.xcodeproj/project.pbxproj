@@ -41,6 +41,11 @@
 		CBEB56CE2BF66C77009476E9 /* Ticket.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEB56AF2BF66C77009476E9 /* Ticket.swift */; };
 		CBEB56CF2BF66C77009476E9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEB56B12BF66C77009476E9 /* ContentView.swift */; };
 		CBEB56D12BF66DED009476E9 /* utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEB56D02BF66DED009476E9 /* utils.swift */; };
+		CBEB56D82BF685BA009476E9 /* CinemaBookingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEB56D32BF685BA009476E9 /* CinemaBookingView.swift */; };
+		CBEB56D92BF685BA009476E9 /* Cinema.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEB56D42BF685BA009476E9 /* Cinema.swift */; };
+		CBEB56DA2BF685BA009476E9 /* MapContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEB56D52BF685BA009476E9 /* MapContentView.swift */; };
+		CBEB56DB2BF685BA009476E9 /* CinemaMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEB56D62BF685BA009476E9 /* CinemaMapView.swift */; };
+		CBEB56DC2BF685BA009476E9 /* CinemaListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEB56D72BF685BA009476E9 /* CinemaListView.swift */; };
 		DAC89B872BF123BB00FB56AA /* userDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC89B862BF123BB00FB56AA /* userDetails.swift */; };
 /* End PBXBuildFile section */
 
@@ -80,6 +85,11 @@
 		CBEB56AF2BF66C77009476E9 /* Ticket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ticket.swift; sourceTree = "<group>"; };
 		CBEB56B12BF66C77009476E9 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CBEB56D02BF66DED009476E9 /* utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = utils.swift; sourceTree = "<group>"; };
+		CBEB56D32BF685BA009476E9 /* CinemaBookingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CinemaBookingView.swift; sourceTree = "<group>"; };
+		CBEB56D42BF685BA009476E9 /* Cinema.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cinema.swift; sourceTree = "<group>"; };
+		CBEB56D52BF685BA009476E9 /* MapContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapContentView.swift; sourceTree = "<group>"; };
+		CBEB56D62BF685BA009476E9 /* CinemaMapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CinemaMapView.swift; sourceTree = "<group>"; };
+		CBEB56D72BF685BA009476E9 /* CinemaListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CinemaListView.swift; sourceTree = "<group>"; };
 		DAC89B862BF123BB00FB56AA /* userDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userDetails.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -156,7 +166,7 @@
 			path = CustomUI;
 			sourceTree = "<group>";
 		};
-		CBEB56A12BF66C77009476E9 /* Views */ = {
+		CBEB56A12BF66C77009476E9 /* HomeView */ = {
 			isa = PBXGroup;
 			children = (
 				CBEB569B2BF66C77009476E9 /* BookingView.swift */,
@@ -166,16 +176,17 @@
 				CBEB569F2BF66C77009476E9 /* SeatsView.swift */,
 				CBEB56A02BF66C77009476E9 /* TicketView.swift */,
 			);
-			path = Views;
+			path = HomeView;
 			sourceTree = "<group>";
 		};
 		CBEB56AC2BF66C77009476E9 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CBEB56DD2BF685E1009476E9 /* CinemaMapView */,
 				CBEB56D22BF678FC009476E9 /* LoginView */,
 				CBEB56942BF66C77009476E9 /* ButtonsUI */,
 				CBEB569A2BF66C77009476E9 /* CustomUI */,
-				CBEB56A12BF66C77009476E9 /* Views */,
+				CBEB56A12BF66C77009476E9 /* HomeView */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -183,6 +194,7 @@
 		CBEB56B02BF66C77009476E9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				CBEB56D42BF685BA009476E9 /* Cinema.swift */,
 				CBEB56AD2BF66C77009476E9 /* Poster.swift */,
 				CBEB56AE2BF66C77009476E9 /* Tab.swift */,
 				CBEB56AF2BF66C77009476E9 /* Ticket.swift */,
@@ -206,6 +218,17 @@
 				CBEB56AB2BF66C77009476E9 /* userProfile.swift */,
 			);
 			path = LoginView;
+			sourceTree = "<group>";
+		};
+		CBEB56DD2BF685E1009476E9 /* CinemaMapView */ = {
+			isa = PBXGroup;
+			children = (
+				CBEB56D32BF685BA009476E9 /* CinemaBookingView.swift */,
+				CBEB56D72BF685BA009476E9 /* CinemaListView.swift */,
+				CBEB56D62BF685BA009476E9 /* CinemaMapView.swift */,
+				CBEB56D52BF685BA009476E9 /* MapContentView.swift */,
+			);
+			path = CinemaMapView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -279,8 +302,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				CBEB56CB2BF66C77009476E9 /* userProfile.swift in Sources */,
+				CBEB56DB2BF685BA009476E9 /* CinemaMapView.swift in Sources */,
 				CBEB56B52BF66C77009476E9 /* RoundButton.swift in Sources */,
 				CBEB56CF2BF66C77009476E9 /* ContentView.swift in Sources */,
+				CBEB56DA2BF685BA009476E9 /* MapContentView.swift in Sources */,
 				CBEB56CA2BF66C77009476E9 /* signUp.swift in Sources */,
 				CBEB56B32BF66C77009476E9 /* DateButton.swift in Sources */,
 				CBEB56C62BF66C77009476E9 /* homePage.swift in Sources */,
@@ -292,6 +317,7 @@
 				CBEB56C12BF66C77009476E9 /* TicketView.swift in Sources */,
 				CBAE92602BEFE3F200F9852E /* MovieBookingApp.swift in Sources */,
 				CBEB56BB2BF66C77009476E9 /* StatusUI.swift in Sources */,
+				CBEB56D92BF685BA009476E9 /* Cinema.swift in Sources */,
 				CBEB56B72BF66C77009476E9 /* CircleBackground.swift in Sources */,
 				CBEB56C32BF66C77009476E9 /* editDetails.swift in Sources */,
 				CBEB56C02BF66C77009476E9 /* SeatsView.swift in Sources */,
@@ -301,6 +327,7 @@
 				CBEB56BE2BF66C77009476E9 /* ETicketView.swift in Sources */,
 				CBEB56C42BF66C77009476E9 /* editDetails2.swift in Sources */,
 				CBEB56CD2BF66C77009476E9 /* Tab.swift in Sources */,
+				CBEB56D82BF685BA009476E9 /* CinemaBookingView.swift in Sources */,
 				CBEB56C92BF66C77009476E9 /* myBookings.swift in Sources */,
 				CBEB56B42BF66C77009476E9 /* LargeButton.swift in Sources */,
 				CBEB56B92BF66C77009476E9 /* CustomTabBar.swift in Sources */,
@@ -309,6 +336,7 @@
 				CBEB56C52BF66C77009476E9 /* Font.swift in Sources */,
 				DAC89B872BF123BB00FB56AA /* userDetails.swift in Sources */,
 				CBEB56C72BF66C77009476E9 /* loginPage.swift in Sources */,
+				CBEB56DC2BF685BA009476E9 /* CinemaListView.swift in Sources */,
 				CBEB56BA2BF66C77009476E9 /* ScrollSection.swift in Sources */,
 				CBEB56D12BF66DED009476E9 /* utils.swift in Sources */,
 			);
