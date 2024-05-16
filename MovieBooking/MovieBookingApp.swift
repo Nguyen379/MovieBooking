@@ -11,7 +11,7 @@ import SwiftUI
 struct MovieBookingApp: App {
     var body: some Scene {
         WindowGroup {
-            loginPage()
+            ContentView()
         }
     }
 }

@@ -70,9 +70,6 @@ struct loginPage: View {
     }
 }
 
-
-
-
 #Preview {
     loginPage()
 }
