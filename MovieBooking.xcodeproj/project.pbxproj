@@ -43,6 +43,7 @@
 		CBEB56DC2BF685BA009476E9 /* CinemaListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEB56D72BF685BA009476E9 /* CinemaListView.swift */; };
 		DA6FB7042BF8BD73000B98D7 /* UserModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DA6FB7022BF8BD73000B98D7 /* UserModel.xcdatamodeld */; };
 		DA6FB7062BF8BE59000B98D7 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6FB7052BF8BE59000B98D7 /* DataManager.swift */; };
+		DA6FB70C2BF93C88000B98D7 /* LargeButtonTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6FB70B2BF93C88000B98D7 /* LargeButtonTemplate.swift */; };
 		DAC89B872BF123BB00FB56AA /* userDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC89B862BF123BB00FB56AA /* userDetails.swift */; };
 /* End PBXBuildFile section */
 
@@ -84,6 +85,7 @@
 		CBEB56D72BF685BA009476E9 /* CinemaListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CinemaListView.swift; sourceTree = "<group>"; };
 		DA6FB7032BF8BD73000B98D7 /* UserModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = UserModel.xcdatamodel; sourceTree = "<group>"; };
 		DA6FB7052BF8BE59000B98D7 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		DA6FB70B2BF93C88000B98D7 /* LargeButtonTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeButtonTemplate.swift; sourceTree = "<group>"; };
 		DAC89B862BF123BB00FB56AA /* userDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userDetails.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -144,6 +146,7 @@
 				CBEB56912BF66C77009476E9 /* LargeButton.swift */,
 				CBEB56922BF66C77009476E9 /* RoundButton.swift */,
 				CBEB56932BF66C77009476E9 /* TimeButton.swift */,
+				DA6FB70B2BF93C88000B98D7 /* LargeButtonTemplate.swift */,
 			);
 			path = ButtonsUI;
 			sourceTree = "<group>";
@@ -295,6 +298,7 @@
 				CBEB56CB2BF66C77009476E9 /* userProfile.swift in Sources */,
 				DA6FB7062BF8BE59000B98D7 /* DataManager.swift in Sources */,
 				CBEB56DB2BF685BA009476E9 /* CinemaMapView.swift in Sources */,
+				DA6FB70C2BF93C88000B98D7 /* LargeButtonTemplate.swift in Sources */,
 				CBEB56B52BF66C77009476E9 /* RoundButton.swift in Sources */,
 				CBEB56CF2BF66C77009476E9 /* ContentView.swift in Sources */,
 				CBEB56DA2BF685BA009476E9 /* MapContentView.swift in Sources */,

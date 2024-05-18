@@ -40,16 +40,9 @@ struct loginPage: View {
                         .padding(.horizontal, 20)
                 }
                 
-                Button(action: validate) {
+                LargeButtonTemplate(action: validate)
                     Text("Login")
-                        .fontWeight(.bold)
-                        .frame(maxWidth: .infinity)
-                        .padding()
-                        .background(Color.blue)
-                        .foregroundColor(.white)
-                        .cornerRadius(10)
-                        .padding(.horizontal, 20)
-                }
+                
                 .disabled(email.isEmpty || password.isEmpty)
                 .padding()
                 .simultaneousGesture(TapGesture().onEnded {
