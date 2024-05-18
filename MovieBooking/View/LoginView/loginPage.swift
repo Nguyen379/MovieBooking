@@ -45,9 +45,7 @@ struct loginPage: View {
                 
                 .disabled(email.isEmpty || password.isEmpty)
                 .padding()
-                .simultaneousGesture(TapGesture().onEnded {
-                    validate()
-                })
+                
                 
                 HStack {
                     Text("Don't have an account?")
