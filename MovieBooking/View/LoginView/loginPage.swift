@@ -44,8 +44,10 @@ struct loginPage: View {
                     Text("Login")
                         .foregroundColor(.white)
                         .padding()
-                        .background(isLoginSuccessful ? Color.blue : Color.gray)
+                        .background(Color.blue)
                         .cornerRadius(8)
+                        .padding(.horizontal, 20)
+                        .frame(maxWidth: .infinity)
                 }
                 .disabled(email.isEmpty || password.isEmpty)
                 .padding()
@@ -65,7 +67,7 @@ struct loginPage: View {
                 Spacer()
             }
             .padding()
-            .background(NavigationLink(destination: homePage(), isActive: $isLoginSuccessful) { EmptyView() })
+            .background(NavigationLink(destination: homePage().navigationBarBackButtonHidden(true), isActive: $isLoginSuccessful) { EmptyView() })
         }
     }
     
