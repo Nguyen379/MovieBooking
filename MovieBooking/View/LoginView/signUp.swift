@@ -27,19 +27,23 @@ struct signUp: View {
                     .padding()
                 
                 TextField("Email", text: $userDetails.email)
+                    .autocapitalization(.none)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .padding()
                 
                 TextField("Username", text: $userDetails.username)
+                    .autocapitalization(.none)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .padding()
                 
                 SecureField("Password", text: $userDetails.password)
+                    .autocapitalization(.none)
                     .textContentType(.none)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .padding()
                 
                 SecureField("Confirm Password", text: $confirmPassword)
+                    .autocapitalization(.none)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .padding()
                 

@@ -27,10 +27,13 @@ struct loginPage: View {
                     .padding()
                 
                 TextField("Email", text: $email)
+                    .autocapitalization(.none)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .padding()
                 
                 SecureField("Password", text: $password)
+                    .textContentType(.none) 
+                    .autocapitalization(.none)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .padding()
                 
