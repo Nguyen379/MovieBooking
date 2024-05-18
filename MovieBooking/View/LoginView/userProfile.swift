@@ -21,13 +21,6 @@ struct userProfile: View {
                         Text("Sign Out")
                     }
                     
-                    NavigationLink(destination: editDetails1().navigationBarBackButtonHidden(true)) {
-                        Text("Edit User Details")
-                    }
-                    
-                    NavigationLink(destination: myBookings().navigationBarBackButtonHidden(true)) {
-                        Text("My Bookings")
-                    }
                     
                     NavigationLink(destination: homePage().navigationBarBackButtonHidden(true)) {
                         Text("Return to Home Page")
