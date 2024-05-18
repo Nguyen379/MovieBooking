@@ -4,71 +4,42 @@
 //
 //  Created by Minh Trinh on 13/5/2024.
 //
+
+// ViewUserDetailPage.swift
 import SwiftUI
 
 struct editDetails1: View {
-    @Environment(\.managedObjectContext) private var viewContext
-    @StateObject private var userDetails = userDetail(context: PersistenceController.shared.container.viewContext)
+    @ObservedObject var userDetails: userDetail
     
     var body: some View {
-        NavigationView {
-            VStack {
-                // Board to display username and password
-                VStack(alignment: .leading, spacing: 10) {
-                    Text("Your current username, email, password:")
-                        .font(.titleFont)
-                        .padding()
-                    Text("Username:")
-                    Text(userDetails.username)
-                        .frame(maxWidth: 300, alignment: .leading)
-                        .padding()
-                        .overlay(RoundedRectangle(cornerRadius: 5).stroke(Color.gray, lineWidth: 1))
-                    
-                    Text("Email:")
-                    Text(userDetails.email)
-                        .frame(maxWidth: 300, alignment: .leading)                       .padding()
-                        .overlay(RoundedRectangle(cornerRadius: 5).stroke(Color.gray, lineWidth: 1))
-                    
-                    Text("Password:")
-                    Text(userDetails.password)
-                        .frame(maxWidth: 300, alignment: .leading)                       .padding()
-                        .overlay(RoundedRectangle(cornerRadius: 5).stroke(Color.gray, lineWidth: 1))
-                        .padding()
-                    
-                    Text("To manage details, click the below buttons")
-                    
-                }
-                .padding()
-                
-                // Buttons for Edit and Delete
-                HStack {
-                    NavigationLink(destination: editDetails2().navigationBarBackButtonHidden(true)) {
-                        Text("Edit")
-                            .padding()
-                            .buttonStyle(.bordered)
-                    }
-                    
-                    NavigationLink(destination: loginPage().navigationBarBackButtonHidden(true)) {
-                        Text("Delete account")
-                            .padding()
-                            .buttonStyle(.bordered)
-                            .foregroundColor(.red)
-                    }
-                }
-                    NavigationLink(destination: userProfile().navigationBarBackButtonHidden(true)) {
-                        Text("Go back")
-                            .padding()
-                            .buttonStyle(.bordered)
-                            .foregroundColor(.blue)
-                    }
+        VStack {
+            Label("Username: \(userDetails.username)", systemImage: "person.fill")
+            Label("Email: \(userDetails.email)", systemImage: "envelope.fill")
+            Label("Password: \(userDetails.password)", systemImage: "lock.fill")
+            
+            NavigationLink(destination: editDetails2(userDetails: userDetails).navigationBarBackButtonHidden(true)) {
+                Text("Edit Details")
+                    .padding()
             }
-            .navigationBarTitle("Edit User Details", displayMode: .inline)
+            
+            NavigationLink(destination: homePage().navigationBarBackButtonHidden(true)) {
+                Text("Home")
+                    .padding()
+            }
         }
+        .onAppear {
+            userDetails.fetchUser(email: userDetails.email, password: userDetails.password)
+        }
+        .navigationTitle("User Detail")
     }
-    
 }
 
 
-#Preview {
-    editDetails1()
-}
+
+
+
+
+
+//#Preview {
+  //  editDetails1()
+//}

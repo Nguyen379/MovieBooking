@@ -214,14 +214,14 @@
 				DA6FB7022BF8BD73000B98D7 /* UserModel.xcdatamodeld */,
 				CBEB56A32BF66C77009476E9 /* editDetails.swift */,
 				CBEB56A42BF66C77009476E9 /* editDetails2.swift */,
+				CBEB56AB2BF66C77009476E9 /* userProfile.swift */,
 				CBEB56A52BF66C77009476E9 /* Font.swift */,
 				DA6FB7052BF8BE59000B98D7 /* DataManager.swift */,
-				CBEB56A62BF66C77009476E9 /* homePage.swift */,
 				CBEB56A72BF66C77009476E9 /* loginPage.swift */,
+				CBEB56A62BF66C77009476E9 /* homePage.swift */,
 				CBEB56A82BF66C77009476E9 /* movieDescription.swift */,
 				CBEB56A92BF66C77009476E9 /* myBookings.swift */,
 				CBEB56AA2BF66C77009476E9 /* signUp.swift */,
-				CBEB56AB2BF66C77009476E9 /* userProfile.swift */,
 			);
 			path = LoginView;
 			sourceTree = "<group>";

@@ -36,7 +36,7 @@ class userDetail: ObservableObject {
         }
     }
     
-    func fetchUser(email: String, password: String) -> Bool {
+    func fetchUser(email: String, password: String) {
         let fetchRequest: NSFetchRequest<User> = User.fetchRequest()
         fetchRequest.predicate = NSPredicate(format: "email == %@ AND password == %@", email, password)
         
@@ -44,12 +44,13 @@ class userDetail: ObservableObject {
             let result = try viewContext.fetch(fetchRequest)
             if let user = result.first {
                 self.username = user.username ?? ""
-                return true
+                self.email = user.email ?? ""
+                self.password = user.password ?? ""
             }
         } catch {
             print("Failed to fetch user: \(error)")
         }
-        return false
+       
     }
 
 func modifyUser(email: String, newUsername: String?, newEmail: String?, newPassword: String?) -> Bool {
