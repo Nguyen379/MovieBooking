@@ -192,6 +192,8 @@
 				CBEB56AD2BF66C77009476E9 /* Poster.swift */,
 				CBEB56AE2BF66C77009476E9 /* Tab.swift */,
 				CBEB56AF2BF66C77009476E9 /* Ticket.swift */,
+				DA6FB7022BF8BD73000B98D7 /* UserModel.xcdatamodeld */,
+				DA6FB7052BF8BE59000B98D7 /* DataManager.swift */,
 				DAC89B862BF123BB00FB56AA /* userDetails.swift */,
 			);
 			path = Model;
@@ -200,10 +202,8 @@
 		CBEB56D22BF678FC009476E9 /* LoginView */ = {
 			isa = PBXGroup;
 			children = (
-				DA6FB7022BF8BD73000B98D7 /* UserModel.xcdatamodeld */,
 				CBEB56AB2BF66C77009476E9 /* userProfile.swift */,
 				CBEB56A52BF66C77009476E9 /* Font.swift */,
-				DA6FB7052BF8BE59000B98D7 /* DataManager.swift */,
 				CBEB56A72BF66C77009476E9 /* loginPage.swift */,
 				CBEB56A62BF66C77009476E9 /* homePage.swift */,
 				CBEB56AA2BF66C77009476E9 /* signUp.swift */,
@@ -540,8 +540,7 @@
 				DA6FB7032BF8BD73000B98D7 /* UserModel.xcdatamodel */,
 			);
 			currentVersion = DA6FB7032BF8BD73000B98D7 /* UserModel.xcdatamodel */;
-			name = UserModel.xcdatamodeld;
-			path = /Users/24607386/Documents/GitHub/MovieBooking/MovieBooking/View/LoginView/UserModel.xcdatamodeld;
+			path = UserModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
