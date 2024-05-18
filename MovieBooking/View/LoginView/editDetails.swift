@@ -7,7 +7,8 @@
 import SwiftUI
 
 struct editDetails1: View {
-    @StateObject private var UserDetail = userDetail()
+    @Environment(\.managedObjectContext) private var viewContext
+    @StateObject private var userDetails = userDetail(context: PersistenceController.shared.container.viewContext)
     
     var body: some View {
         NavigationView {
@@ -18,18 +19,18 @@ struct editDetails1: View {
                         .font(.titleFont)
                         .padding()
                     Text("Username:")
-                    Text(UserDetail.username)
+                    Text(userDetails.username)
                         .frame(maxWidth: 300, alignment: .leading)
                         .padding()
                         .overlay(RoundedRectangle(cornerRadius: 5).stroke(Color.gray, lineWidth: 1))
                     
                     Text("Email:")
-                    Text(UserDetail.email)
+                    Text(userDetails.email)
                         .frame(maxWidth: 300, alignment: .leading)                       .padding()
                         .overlay(RoundedRectangle(cornerRadius: 5).stroke(Color.gray, lineWidth: 1))
                     
                     Text("Password:")
-                    Text(UserDetail.password)
+                    Text(userDetails.password)
                         .frame(maxWidth: 300, alignment: .leading)                       .padding()
                         .overlay(RoundedRectangle(cornerRadius: 5).stroke(Color.gray, lineWidth: 1))
                         .padding()

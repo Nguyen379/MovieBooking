@@ -7,7 +7,8 @@
 
 import SwiftUI
 struct editDetails2: View {
-    @StateObject private var UserDetail = userDetail()
+    @Environment(\.managedObjectContext) private var viewContext
+    @StateObject private var userDetails = userDetail(context: PersistenceController.shared.container.viewContext)
     @State private var email: String = ""
     @State private var password: String = ""
     @State private var username: String = ""

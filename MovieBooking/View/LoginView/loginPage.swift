@@ -6,16 +6,17 @@
 //
 
 import SwiftUI
+import CoreData
 
 struct loginPage: View {
-    @StateObject private var userDetailView = userDetail()
+    @Environment(\.managedObjectContext) private var viewContext
+    @StateObject private var userDetails = userDetail(context: PersistenceController.shared.container.viewContext)
+    
     @State private var email: String = ""
     @State private var password: String = ""
-    @State private var match: Bool = false
-    @State private var check: Bool = false
-
-    let userInput = userDetail()
-
+    @State private var isLoginSuccessful: Bool = false
+    @State private var errorMessage: String?
+    
     var body: some View {
         NavigationView {
             VStack {
@@ -33,32 +34,31 @@ struct loginPage: View {
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .padding()
                 
-                HStack{
-                    Button(action: {
-                        if email == userInput.email && password == userInput.password{
-                            match = true
-                        } else {
-                            match = false
-                        }}){
-                            Text("Validate")
-                        }
-                    
-                    NavigationLink(destination: homePage().navigationBarBackButtonHidden(true)) {
-                        Text("Login")
-                            .foregroundColor(match ? .blue : .gray)
-                    }
-                    .disabled(!match)
-                    .padding()
-                    
+                if let errorMessage = errorMessage {
+                    Text(errorMessage)
+                        .foregroundColor(.red)
+                        .padding(.horizontal, 20)
                 }
                 
-                
+                HStack {
+                    Button(action: validate) {
+                        Text("Login")
+                    }
+                    .padding()
+                    
+                   // NavigationLink(destination: homePage().navigationBarBackButtonHidden(true), isActive: $isLoginSuccessful) {
+                       // Text("Login")
+                     //       .foregroundColor(isLoginSuccessful ? .blue : .gray)
+                  //  }
+                   // .disabled(!isLoginSuccessful)
+                    //.padding()
+                }
                 
                 HStack {
-                    Text("Don't have an account? ")
+                    Text("Don't have an account?")
                     NavigationLink(destination: signUp().navigationBarBackButtonHidden(true)) {
                         Text("Sign up")
-                        .foregroundColor(.blue)
+                            .foregroundColor(.blue)
                     }
                 }
                 .padding()
@@ -68,7 +68,24 @@ struct loginPage: View {
             .padding()
         }
     }
+    
+    private func validate() {
+        guard !email.isEmpty, !password.isEmpty else {
+            errorMessage = "Email and password are required."
+            isLoginSuccessful = false
+            return
+        }
+        
+        if userDetails.fetchUser(email: email, password: password) {
+            errorMessage = nil
+            isLoginSuccessful = true
+        } else {
+            errorMessage = "Invalid email or password."
+            isLoginSuccessful = false
+        }
+    }
 }
+
 
 #Preview {
     loginPage()
