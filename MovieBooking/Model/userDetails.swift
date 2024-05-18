@@ -36,7 +36,7 @@ class userDetail: ObservableObject {
         }
     }
     
-    func fetchUser(email: String, password: String) {
+    func fetchUser(email: String, password: String) -> Bool{
         let fetchRequest: NSFetchRequest<User> = User.fetchRequest()
         fetchRequest.predicate = NSPredicate(format: "email == %@ AND password == %@", email, password)
         
@@ -46,11 +46,18 @@ class userDetail: ObservableObject {
                 self.username = user.username ?? ""
                 self.email = user.email ?? ""
                 self.password = user.password ?? ""
+                return true
             }
         } catch {
             print("Failed to fetch user: \(error)")
         }
-       
+       return false
+    }
+    func displayUser() -> some View {
+        VStack{
+            Label("Username: \(self.username)", systemImage: "person.fill")
+            Label("Email: \(self.email)", systemImage: "envelope.fill")
+            Label("Password: \(self.password)", systemImage: "lock.fill")        }
     }
 
 func modifyUser(email: String, newUsername: String?, newEmail: String?, newPassword: String?) -> Bool {
@@ -93,6 +100,7 @@ func deleteUser(email: String) -> Bool {
         }
         return false
     }
+
 
 }
 

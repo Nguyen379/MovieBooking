@@ -8,28 +8,32 @@
 // ViewUserDetailPage.swift
 import SwiftUI
 
+
 struct editDetails1: View {
     @ObservedObject var userDetails: userDetail
     
     var body: some View {
         VStack {
-            Label("Username: \(userDetails.username)", systemImage: "person.fill")
-            Label("Email: \(userDetails.email)", systemImage: "envelope.fill")
-            Label("Password: \(userDetails.password)", systemImage: "lock.fill")
+            userDetails.displayUser()
             
             NavigationLink(destination: editDetails2(userDetails: userDetails).navigationBarBackButtonHidden(true)) {
                 Text("Edit Details")
                     .padding()
+                    .foregroundColor(.white)
+                    .background(Color.blue)
+                    .cornerRadius(8)
             }
+            .padding(.bottom, 20)
             
             NavigationLink(destination: homePage().navigationBarBackButtonHidden(true)) {
-                Text("Home")
+                Text("Home Page")
                     .padding()
+                    .foregroundColor(.white)
+                    .background(Color.green)
+                    .cornerRadius(8)
             }
         }
-        .onAppear {
-            userDetails.fetchUser(email: userDetails.email, password: userDetails.password)
-        }
+        .padding()
         .navigationTitle("User Detail")
     }
 }
@@ -40,6 +44,13 @@ struct editDetails1: View {
 
 
 
+
+
+
+
+
+
+
 //#Preview {
-  //  editDetails1()
+ //   editDetails1()
 //}

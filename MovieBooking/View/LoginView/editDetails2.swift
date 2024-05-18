@@ -6,66 +6,68 @@
 //
 
 import SwiftUI
+
+
 struct editDetails2: View {
-    @Environment(\.managedObjectContext) private var viewContext
-    @StateObject private var userDetails = userDetail(context: PersistenceController.shared.container.viewContext)
-    @State private var email: String = ""
-    @State private var password: String = ""
-    @State private var username: String = ""
+    @ObservedObject var userDetails: userDetail
+    @State private var newUsername: String = ""
+    @State private var newEmail: String = ""
+    @State private var newPassword: String = ""
+    @Environment(\.presentationMode) private var presentationMode
+
+
     var body: some View {
-        NavigationView {
-            VStack {
-                // Board to display username and password
-                VStack(alignment: .leading, spacing: 10) {
-                    Text("Enter your new username, email, password:")
-                        .font(.titleFont)
-                        .foregroundColor(.blue)
-                        .padding()
-                    Text("Username:")
-                    TextField("Enter username", text: $username)
-                        .frame(maxWidth: 300, alignment: .leading)
-                        .padding()
-                        .overlay(RoundedRectangle(cornerRadius: 5).stroke(Color.gray, lineWidth: 1))
-                    
-                    Text("Email:")
-                    TextField("Enter your new email", text: $email)
-                        .frame(maxWidth: 300, alignment: .leading)
-                        .padding()
-                        .overlay(RoundedRectangle(cornerRadius: 5).stroke(Color.gray, lineWidth: 1))
-                    
-                    Text("Password:")
-                    TextField("Enter your new password",text: $password)
-                        .frame(maxWidth: 300, alignment: .leading)
-                        .padding()
-                        .overlay(RoundedRectangle(cornerRadius: 5).stroke(Color.gray, lineWidth: 1))
-                        .padding()
-                    
-                    Text("To manage details, click the below buttons")
-                    
-                }
-                .padding()
-                
-                // Buttons for Edit and Delete
-                    NavigationLink(destination: editDetails1().navigationBarBackButtonHidden(true)) {
-                        Text("Confirm")
-                            .padding()
-                            .buttonStyle(.bordered)
-                    }
-                    
-                    NavigationLink(destination: userProfile().navigationBarBackButtonHidden(true)) {
-                        Text("Cancel")
-                            .padding()
-                            .buttonStyle(.bordered)
-                            .foregroundColor(.red)
-                    }
-                
+        VStack {
+            Text("Edit Details")
+                .font(.largeTitle)
+                .padding(.bottom, 20)
+            
+            TextField("New Email", text: $newEmail)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .padding(.bottom, 10)
+            
+            TextField("New Username", text: $newUsername)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .padding(.bottom, 10)
+            
+            SecureField("New Password", text: $newPassword)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .padding(.bottom, 20)
+            
+            Button("Save Changes") {
+                updateDetails()
             }
-            .navigationBarTitle("Edit User Details", displayMode: .inline)
+            .padding()
+            .foregroundColor(.white)
+            .background(Color.blue)
+            .cornerRadius(8)
+        }
+        .padding()
+        .onAppear {
+            self.newEmail = userDetails.email
+            self.newUsername = userDetails.username
+            self.newPassword = userDetails.password
         }
     }
     
+    private func updateDetails() {
+        let success = userDetails.modifyUser(email: userDetails.email, newUsername: newUsername, newEmail: newEmail, newPassword: newPassword)
+        
+        if success {
+            // Update the observable object
+            userDetails.username = newUsername
+            userDetails.email = newEmail
+            userDetails.password = newPassword
+            
+            // Dismiss the view
+            presentationMode.wrappedValue.dismiss()
+        } else {
+            print("Failed to update user details")
+        }
+    }
 }
-#Preview {
-    editDetails2()
-}
+
+//#Preview {
+ //   editDetails2()
+//}
 

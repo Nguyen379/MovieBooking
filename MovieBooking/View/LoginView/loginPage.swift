@@ -81,6 +81,8 @@ struct loginPage: View {
         
         if userDetails.fetchUser(email: email, password: password) {
             errorMessage = nil
+            userDetails.email = email
+            userDetails.password = password
             isLoginSuccessful = true
         } else {
             errorMessage = "Invalid email or password."
