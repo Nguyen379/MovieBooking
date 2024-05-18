@@ -30,12 +30,22 @@ struct loginPage: View {
                     .autocapitalization(.none)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .padding()
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 8)
+                            .stroke(Color.purple, lineWidth: 2)
+                    )
+                    .textFieldStyle(PlainTextFieldStyle())
                 
                 SecureField("Password", text: $password)
                     .textContentType(.none) 
                     .autocapitalization(.none)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .padding()
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 8)
+                            .stroke(Color.purple, lineWidth: 2)
+                    )
+                    .textFieldStyle(PlainTextFieldStyle())
                 
                 if let errorMessage = errorMessage {
                     Text(errorMessage)

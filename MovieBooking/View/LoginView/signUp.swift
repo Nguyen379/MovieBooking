@@ -30,22 +30,42 @@ struct signUp: View {
                     .autocapitalization(.none)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .padding()
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 8)
+                            .stroke(Color.purple, lineWidth: 2)
+                    )
+                    .textFieldStyle(PlainTextFieldStyle())
                 
                 TextField("Username", text: $userDetails.username)
                     .autocapitalization(.none)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .padding()
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 8)
+                            .stroke(Color.purple, lineWidth: 2)
+                    )
+                    .textFieldStyle(PlainTextFieldStyle())
                 
                 SecureField("Password", text: $userDetails.password)
                     .autocapitalization(.none)
                     .textContentType(.none)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .padding()
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 8)
+                            .stroke(Color.purple, lineWidth: 2)
+                    )
+                    .textFieldStyle(PlainTextFieldStyle())
                 
                 SecureField("Confirm Password", text: $confirmPassword)
                     .autocapitalization(.none)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .padding()
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 8)
+                            .stroke(Color.purple, lineWidth: 2)
+                    )
+                    .textFieldStyle(PlainTextFieldStyle())
                 
                 if let errorMessage = errorMessage {
                     Text(errorMessage)
