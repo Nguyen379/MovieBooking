@@ -87,7 +87,7 @@ struct loginPage: View {
                 Spacer()
             }
             .padding()
-            .background(NavigationLink(destination: homePage().navigationBarBackButtonHidden(true), isActive: $isLoginSuccessful) { EmptyView() })
+            .background(NavigationLink(destination: ContentView().navigationBarBackButtonHidden(true), isActive: $isLoginSuccessful) { EmptyView() })
         }
     }
     
