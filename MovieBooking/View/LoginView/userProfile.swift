@@ -21,7 +21,7 @@ struct userProfile: View {
                         Text("Sign Out")
                     }
                     
-                    NavigationLink(destination: editDetails1(userDetails: userDetails).navigationBarBackButtonHidden(true)) {
+                    NavigationLink(destination: editDetails1().navigationBarBackButtonHidden(true)) {
                         Text("Edit User Details")
                     }
                     

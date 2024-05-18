@@ -83,6 +83,7 @@ struct loginPage: View {
             errorMessage = nil
             userDetails.email = email
             userDetails.password = password
+            
             isLoginSuccessful = true
         } else {
             errorMessage = "Invalid email or password."

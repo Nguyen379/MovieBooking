@@ -35,6 +35,8 @@ class userDetail: ObservableObject {
             return false
         }
     }
+
+
     
     func fetchUser(email: String, password: String) -> Bool{
         let fetchRequest: NSFetchRequest<User> = User.fetchRequest()
@@ -53,12 +55,13 @@ class userDetail: ObservableObject {
         }
        return false
     }
-    func displayUser() -> some View {
-        VStack{
-            Label("Username: \(self.username)", systemImage: "person.fill")
-            Label("Email: \(self.email)", systemImage: "envelope.fill")
-            Label("Password: \(self.password)", systemImage: "lock.fill")        }
-    }
+  //  func displayUser() -> some View {
+     //  fetchUserByEmail(email: email)
+     //   return VStack{
+      //      Label("Username: \(self.username)", systemImage: "person.fill")
+       //     Label("Email: \(self.email)", systemImage: "envelope.fill")
+       //     Label("Password: \(self.password)", systemImage: "lock.fill")      //  }
+  //  }
 
 func modifyUser(email: String, newUsername: String?, newEmail: String?, newPassword: String?) -> Bool {
         let fetchRequest: NSFetchRequest<User> = User.fetchRequest()
