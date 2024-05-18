@@ -40,19 +40,18 @@ struct loginPage: View {
                         .padding(.horizontal, 20)
                 }
                 
-                HStack {
-                    Button(action: validate) {
-                        Text("Login")
-                    }
-                    .padding()
-                    
-                   // NavigationLink(destination: homePage().navigationBarBackButtonHidden(true), isActive: $isLoginSuccessful) {
-                       // Text("Login")
-                     //       .foregroundColor(isLoginSuccessful ? .blue : .gray)
-                  //  }
-                   // .disabled(!isLoginSuccessful)
-                    //.padding()
+                Button(action: validate) {
+                    Text("Login")
+                        .foregroundColor(.white)
+                        .padding()
+                        .background(isLoginSuccessful ? Color.blue : Color.gray)
+                        .cornerRadius(8)
                 }
+                .disabled(email.isEmpty || password.isEmpty)
+                .padding()
+                .simultaneousGesture(TapGesture().onEnded {
+                    validate()
+                })
                 
                 HStack {
                     Text("Don't have an account?")
@@ -66,6 +65,7 @@ struct loginPage: View {
                 Spacer()
             }
             .padding()
+            .background(NavigationLink(destination: homePage(), isActive: $isLoginSuccessful) { EmptyView() })
         }
     }
     
@@ -85,7 +85,6 @@ struct loginPage: View {
         }
     }
 }
-
 
 #Preview {
     loginPage()
