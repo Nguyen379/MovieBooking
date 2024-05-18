@@ -42,12 +42,13 @@ struct loginPage: View {
                 
                 Button(action: validate) {
                     Text("Login")
-                        .foregroundColor(.white)
+                        .fontWeight(.bold)
+                        .frame(maxWidth: .infinity)
                         .padding()
                         .background(Color.blue)
-                        .cornerRadius(8)
+                        .foregroundColor(.white)
+                        .cornerRadius(10)
                         .padding(.horizontal, 20)
-                        .frame(maxWidth: .infinity)
                 }
                 .disabled(email.isEmpty || password.isEmpty)
                 .padding()

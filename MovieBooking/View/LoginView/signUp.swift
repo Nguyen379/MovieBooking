@@ -58,7 +58,7 @@ struct signUp: View {
             }
 
             if isSignUpSuccessful {
-                Text("Sign Up Successful!")
+                Text("Sign Up Successful! Go back to login page to process!")
                     .foregroundColor(.green)
                     .padding(.top, 10)
             }
