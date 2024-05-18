@@ -59,6 +59,7 @@ struct signUp: View {
                 
                 SecureField("Confirm Password", text: $confirmPassword)
                     .autocapitalization(.none)
+                    .textContentType(.none)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .padding()
                     .overlay(
