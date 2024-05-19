@@ -72,10 +72,8 @@ struct CustomTabBar: View {
             return 1
         case .ticket:
             return 2
-        case .category:
-            return 3
         case .profile:
-            return 4
+            return 3
         }
     }
 }
