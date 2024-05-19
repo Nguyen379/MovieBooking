@@ -1,43 +1,41 @@
-//	
-//  ContentView.swift	
-//  MovieBooking	
-//	
-//  Created by Le Anh Nguyen on 5/12/24.	
-//	
+//
+//  ContentView.swift
+//  MovieBooking
+//
+//  Created by Le Anh Nguyen on 5/12/24.
+//
 
-import SwiftUI	
+import SwiftUI
 
-struct ContentView: View {	
-    @State var currentTab: Tab = .home	
+struct ContentView: View {
+    @State var currentTab: Tab = .location
 
-    init() {	
-        UITabBar.appearance().isHidden = true	
-    }	
+    init() {
+        UITabBar.appearance().isHidden = true
+    }
 
-    var body: some View {	
-        NavigationView {	
-            VStack(spacing: 0) {	
-                TabView(selection: $currentTab) {	
-                    HomeView()	
-                        .tag(Tab.home)	
+    var body: some View {
+        NavigationView {
+            VStack(spacing: 0) {
+                TabView(selection: $currentTab) {
 
-                    MapContentView()	
-                        .tag(Tab.location)	
+                    MapContentView()
+                        .tag(Tab.location)
 
-                    TicketView()	
-                        .tag(Tab.ticket)	
+                    TicketView()
+                        .tag(Tab.ticket)
 
                     loginPage()
-                        .tag(Tab.profile)	
-                }	
+                        .tag(Tab.profile)
+                }
 
-                CustomTabBar(currentTab: $currentTab)	
-            }	
-            .ignoresSafeArea(.keyboard)	
-        }	
-    }	
-}	
+                CustomTabBar(currentTab: $currentTab)
+            }
+            .ignoresSafeArea(.keyboard)
+        }
+    }
+}
 
-#Preview {	
-    ContentView()	
+#Preview {
+    ContentView()
 }

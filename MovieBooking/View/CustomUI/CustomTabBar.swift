@@ -66,14 +66,12 @@ struct CustomTabBar: View {
     
     func getIndex() -> Int {
         switch currentTab {
-        case .home:
-            return 0
         case .location:
-            return 1
+            return 0
         case .ticket:
-            return 2
+            return 1
         case .profile:
-            return 3
+            return 2
         }
     }
 }
