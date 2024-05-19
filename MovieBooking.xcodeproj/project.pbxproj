@@ -63,9 +63,14 @@
 		CBEB56BF2BF66C77009476E9 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEB569E2BF66C77009476E9 /* HomeView.swift */; };
 		CBEB56C02BF66C77009476E9 /* SeatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEB569F2BF66C77009476E9 /* SeatsView.swift */; };
 		CBEB56C12BF66C77009476E9 /* TicketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEB56A02BF66C77009476E9 /* TicketView.swift */; };
+		CBEB56C22BF66C77009476E9 /* bookingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEB56A22BF66C77009476E9 /* bookingPage.swift */; };
+		CBEB56C32BF66C77009476E9 /* editDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEB56A32BF66C77009476E9 /* editDetails.swift */; };
+		CBEB56C42BF66C77009476E9 /* editDetails2.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEB56A42BF66C77009476E9 /* editDetails2.swift */; };
 		CBEB56C52BF66C77009476E9 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEB56A52BF66C77009476E9 /* Font.swift */; };
 		CBEB56C62BF66C77009476E9 /* homePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEB56A62BF66C77009476E9 /* homePage.swift */; };
 		CBEB56C72BF66C77009476E9 /* loginPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEB56A72BF66C77009476E9 /* loginPage.swift */; };
+		CBEB56C82BF66C77009476E9 /* movieDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEB56A82BF66C77009476E9 /* movieDescription.swift */; };
+		CBEB56C92BF66C77009476E9 /* myBookings.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEB56A92BF66C77009476E9 /* myBookings.swift */; };
 		CBEB56CA2BF66C77009476E9 /* signUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEB56AA2BF66C77009476E9 /* signUp.swift */; };
 		CBEB56CB2BF66C77009476E9 /* userProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEB56AB2BF66C77009476E9 /* userProfile.swift */; };
 		CBEB56CC2BF66C77009476E9 /* Poster.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEB56AD2BF66C77009476E9 /* Poster.swift */; };
@@ -77,9 +82,6 @@
 		CBEB56DA2BF685BA009476E9 /* MapContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEB56D52BF685BA009476E9 /* MapContentView.swift */; };
 		CBEB56DB2BF685BA009476E9 /* CinemaMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEB56D62BF685BA009476E9 /* CinemaMapView.swift */; };
 		CBEB56DC2BF685BA009476E9 /* CinemaListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEB56D72BF685BA009476E9 /* CinemaListView.swift */; };
-		DA6FB7042BF8BD73000B98D7 /* UserModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DA6FB7022BF8BD73000B98D7 /* UserModel.xcdatamodeld */; };
-		DA6FB7062BF8BE59000B98D7 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6FB7052BF8BE59000B98D7 /* DataManager.swift */; };
-		DA6FB70C2BF93C88000B98D7 /* LargeButtonTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6FB70B2BF93C88000B98D7 /* LargeButtonTemplate.swift */; };
 		DAC89B872BF123BB00FB56AA /* userDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC89B862BF123BB00FB56AA /* userDetails.swift */; };
 /* End PBXBuildFile section */
 
@@ -138,9 +140,14 @@
 		CBEB569E2BF66C77009476E9 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		CBEB569F2BF66C77009476E9 /* SeatsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeatsView.swift; sourceTree = "<group>"; };
 		CBEB56A02BF66C77009476E9 /* TicketView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TicketView.swift; sourceTree = "<group>"; };
+		CBEB56A22BF66C77009476E9 /* bookingPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = bookingPage.swift; sourceTree = "<group>"; };
+		CBEB56A32BF66C77009476E9 /* editDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = editDetails.swift; sourceTree = "<group>"; };
+		CBEB56A42BF66C77009476E9 /* editDetails2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = editDetails2.swift; sourceTree = "<group>"; };
 		CBEB56A52BF66C77009476E9 /* Font.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		CBEB56A62BF66C77009476E9 /* homePage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = homePage.swift; sourceTree = "<group>"; };
 		CBEB56A72BF66C77009476E9 /* loginPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = loginPage.swift; sourceTree = "<group>"; };
+		CBEB56A82BF66C77009476E9 /* movieDescription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = movieDescription.swift; sourceTree = "<group>"; };
+		CBEB56A92BF66C77009476E9 /* myBookings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = myBookings.swift; sourceTree = "<group>"; };
 		CBEB56AA2BF66C77009476E9 /* signUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = signUp.swift; sourceTree = "<group>"; };
 		CBEB56AB2BF66C77009476E9 /* userProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = userProfile.swift; sourceTree = "<group>"; };
 		CBEB56AD2BF66C77009476E9 /* Poster.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Poster.swift; sourceTree = "<group>"; };
@@ -152,9 +159,6 @@
 		CBEB56D52BF685BA009476E9 /* MapContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapContentView.swift; sourceTree = "<group>"; };
 		CBEB56D62BF685BA009476E9 /* CinemaMapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CinemaMapView.swift; sourceTree = "<group>"; };
 		CBEB56D72BF685BA009476E9 /* CinemaListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CinemaListView.swift; sourceTree = "<group>"; };
-		DA6FB7032BF8BD73000B98D7 /* UserModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = UserModel.xcdatamodel; sourceTree = "<group>"; };
-		DA6FB7052BF8BE59000B98D7 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
-		DA6FB70B2BF93C88000B98D7 /* LargeButtonTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeButtonTemplate.swift; sourceTree = "<group>"; };
 		DAC89B862BF123BB00FB56AA /* userDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userDetails.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -274,7 +278,6 @@
 				CBEB56912BF66C77009476E9 /* LargeButton.swift */,
 				CBEB56922BF66C77009476E9 /* RoundButton.swift */,
 				CBEB56932BF66C77009476E9 /* TimeButton.swift */,
-				DA6FB70B2BF93C88000B98D7 /* LargeButtonTemplate.swift */,
 			);
 			path = ButtonsUI;
 			sourceTree = "<group>";
@@ -332,9 +335,6 @@
 				CBEB56D42BF685BA009476E9 /* Cinema.swift */,
 				CBEB56AD2BF66C77009476E9 /* Poster.swift */,
 				CBEB56AE2BF66C77009476E9 /* Tab.swift */,
-				CBEB56AF2BF66C77009476E9 /* Ticket.swift */,
-				DA6FB7022BF8BD73000B98D7 /* UserModel.xcdatamodeld */,
-				DA6FB7052BF8BE59000B98D7 /* DataManager.swift */,
 				DAC89B862BF123BB00FB56AA /* userDetails.swift */,
 			);
 			path = Model;
@@ -343,11 +343,16 @@
 		CBEB56D22BF678FC009476E9 /* LoginView */ = {
 			isa = PBXGroup;
 			children = (
-				CBEB56AB2BF66C77009476E9 /* userProfile.swift */,
+				CBEB56A22BF66C77009476E9 /* bookingPage.swift */,
+				CBEB56A32BF66C77009476E9 /* editDetails.swift */,
+				CBEB56A42BF66C77009476E9 /* editDetails2.swift */,
 				CBEB56A52BF66C77009476E9 /* Font.swift */,
-				CBEB56A72BF66C77009476E9 /* loginPage.swift */,
 				CBEB56A62BF66C77009476E9 /* homePage.swift */,
+				CBEB56A72BF66C77009476E9 /* loginPage.swift */,
+				CBEB56A82BF66C77009476E9 /* movieDescription.swift */,
+				CBEB56A92BF66C77009476E9 /* myBookings.swift */,
 				CBEB56AA2BF66C77009476E9 /* signUp.swift */,
+				CBEB56AB2BF66C77009476E9 /* userProfile.swift */,
 			);
 			path = LoginView;
 			sourceTree = "<group>";
@@ -447,9 +452,6 @@
 				CB7057E12BFA3F58003A5BD8 /* ImageLoader.swift in Sources */,
 				CBEB56DB2BF685BA009476E9 /* CinemaMapView.swift in Sources */,
 				CB70580F2BFA3F7B003A5BD8 /* ScreenShape.swift in Sources */,
-				DA6FB7062BF8BE59000B98D7 /* DataManager.swift in Sources */,
-				CBEB56DB2BF685BA009476E9 /* CinemaMapView.swift in Sources */,
-				DA6FB70C2BF93C88000B98D7 /* LargeButtonTemplate.swift in Sources */,
 				CBEB56B52BF66C77009476E9 /* RoundButton.swift in Sources */,
 				CBEB56CF2BF66C77009476E9 /* ContentView.swift in Sources */,
 				CB59DBE92BF8A904008ACE1B /* NetworkService.swift in Sources */,
@@ -460,8 +462,6 @@
 				CBEB56BD2BF66C77009476E9 /* ETicketsView.swift in Sources */,
 				CBEB56BC2BF66C77009476E9 /* BookingView.swift in Sources */,
 				CBEB56C82BF66C77009476E9 /* movieDescription.swift in Sources */,
-				DA6FB7042BF8BD73000B98D7 /* UserModel.xcdatamodeld in Sources */,
-				CBEB56CE2BF66C77009476E9 /* Ticket.swift in Sources */,
 				CBEB56B22BF66C77009476E9 /* CircleButton.swift in Sources */,
 				CBEB56C12BF66C77009476E9 /* TicketView.swift in Sources */,
 				CB59DBE32BF8A401008ACE1B /* MovieService.swift in Sources */,
@@ -490,6 +490,7 @@
 				CB7057DF2BFA3F58003A5BD8 /* EnvironmentValues.swift in Sources */,
 				CBEB56BF2BF66C77009476E9 /* HomeView.swift in Sources */,
 				CBEB56BE2BF66C77009476E9 /* ETicketView.swift in Sources */,
+				CBEB56C42BF66C77009476E9 /* editDetails2.swift in Sources */,
 				CBEB56CD2BF66C77009476E9 /* Tab.swift in Sources */,
 				CB7057ED2BFA3F65003A5BD8 /* Cast.swift in Sources */,
 				CB70580A2BFA3F7B003A5BD8 /* ChairView.swift in Sources */,
@@ -768,18 +769,6 @@
 			productName = AlertToast;
 		};
 /* End XCSwiftPackageProductDependency section */
-/* Begin XCVersionGroup section */
-		DA6FB7022BF8BD73000B98D7 /* UserModel.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				DA6FB7032BF8BD73000B98D7 /* UserModel.xcdatamodel */,
-			);
-			currentVersion = DA6FB7032BF8BD73000B98D7 /* UserModel.xcdatamodel */;
-			path = UserModel.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = CBAE92542BEFE3F200F9852E /* Project object */;
 }

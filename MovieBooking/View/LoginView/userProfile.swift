@@ -7,33 +7,38 @@
 
 import SwiftUI
 
-
 struct userProfile: View {
-    @Environment(\.managedObjectContext) private var viewContext
-    @StateObject private var userDetails = userDetail(context: PersistenceController.shared.container.viewContext)
-
-
     var body: some View {
         NavigationView {
-            VStack {
+            VStack{
                 List {
                     NavigationLink(destination: loginPage().navigationBarBackButtonHidden(true)) {
                         Text("Sign Out")
                     }
                     
+                    NavigationLink(destination: editDetails1().navigationBarBackButtonHidden(true)) {
+                        Text("Edit User Details")
+                    }
                     
-                    NavigationLink(destination: homePage().navigationBarBackButtonHidden(true)) {
-                        Text("Return to Home Page")
+                    NavigationLink(destination: myBookings().navigationBarBackButtonHidden(true)) {
+                        Text("My Bookings")
+                    }
+                    NavigationLink(destination:homePage().navigationBarBackButtonHidden(true)) {
+                        Text("Return to home page")
                     }
                 }
                 .navigationTitle("User Profile")
+                
+                
+
+                }
             }
+            
         }
     }
+
+
+
+#Preview {
+    userProfile()
 }
-
-
-
-//#Preview {
-//    userProfile()
-//}

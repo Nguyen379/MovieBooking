@@ -28,7 +28,37 @@ struct homePage: View {
                 }
                 .offset(y: 50)
                 
-                
+                HStack{
+                    ZStack{
+                        Rectangle()
+                            .fill(Color.red)
+                            .frame(width: 100, height: 100)
+                        
+                        NavigationLink(
+                            destination: movieDescription().navigationBarBackButtonHidden(true)) {
+                                Text("Movie 1")
+                                    .foregroundColor(.white)
+                            }
+                        
+                        
+                    }
+                    .offset(y: 200)
+                    ZStack{
+                        Rectangle()
+                            .fill(Color.red)
+                            .frame(width: 100, height: 100)
+                        NavigationLink(
+                            destination: homePage().navigationBarBackButtonHidden(true)) {
+                                VStack{
+                                    Text("Movie 2")
+                                        .foregroundColor(.white)
+                                    Text("(Unavailabe)")
+                                        .foregroundColor(.white)
+                                }
+                            }
+                            }
+                            .offset(y: 200)
+                    }
                 }
             }
         }
