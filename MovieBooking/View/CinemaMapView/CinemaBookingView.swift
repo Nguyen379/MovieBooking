@@ -14,7 +14,7 @@ struct CinemaBookingView: View {
     var body: some View {
         VStack(spacing: 20) {
             Text("Would you like to book at (cinema.name)?")
-            NavigationLink(destination: BookingView()) {
+            NavigationLink(destination: HomeView()) {
                 Text("Yes, book now!")
                     .padding()
                     .background(Color.blue)
