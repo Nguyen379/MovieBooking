@@ -27,8 +27,8 @@ struct ContentView: View {
                     TicketView()	
                         .tag(Tab.ticket)	
 
-                    Text("Category")	
-                        .tag(Tab.category)	
+                    CategoryView()
+                        .tag(Tab.category)
 
                     loginPage()
                         .tag(Tab.profile)	
