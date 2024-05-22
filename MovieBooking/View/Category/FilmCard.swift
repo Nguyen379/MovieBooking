@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-func FilmCard(movie: Movie, width: CGFloat = 200, height: CGFloat = 260, showTopBar: Bool = true) -> some View {
+func FilmCard(movie: Movie, width: CGFloat = 100, height: CGFloat = 130, showTopBar: Bool = true) -> some View {
         ZStack(alignment: .top) {
             AsyncImage(url: URL(string: movie.posterPath)!) {
                 Rectangle().foregroundColor(Color.gray.opacity(0.4))
